@@ -1,0 +1,33 @@
+import connectDB from "./db/index.js";
+import dotenv from 'dotenv'
+
+dotenv.config({
+    path:'./env'
+})
+
+connectDB()
+
+
+
+
+
+
+// import express from 'express'
+// const app = express()
+
+// (async()=>{
+//     try {
+//         await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`) //database connected
+//         app.on("error",(error)=>{
+//             console.log("ERROR: ",error)
+//             throw error
+//         })
+
+//         app.listen(process.env.PORT,()=>{
+//             console.log(`App is listening on port ${process.env.PORT}`)
+//         })
+//     } catch (error) {
+//         console.error("ERROR: ",error)
+//         throw err
+//     }
+// })()//iffy method directly executes the function async is used as db is another content takes time to retrieve data and alsways use try catch as there might be problem connecting to the database
