@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
         lowercase:true,
         trim:true,
     },
-    fullname:{
+    fullName:{
         type:String,
         required:true,
         trim:true,
@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema({
         type:String, //cloudinary
     },
     watchHistory:[{
-        tyep:mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"Video"
     }],
     password:{
